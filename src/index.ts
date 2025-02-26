@@ -1,6 +1,9 @@
 import express from 'express';
 const app = express()
-const port = 3003
+const jsonBodyMiddleware = bodyParser.json();
+app.use(jsonBodyMiddleware);
+
+const port = process.env.PORT || 3003;
 
 const movies = [
     {
