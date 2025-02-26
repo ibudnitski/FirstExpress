@@ -1,5 +1,12 @@
-import express from 'express';
+import express, { Request, Response } from 'express';
+import bodyParser from 'body-parser';
+import cors from 'cors';
+
+
 const app = express()
+
+const corsMiddleware = cors();
+app.use(corsMiddleware);
 const jsonBodyMiddleware = bodyParser.json();
 app.use(jsonBodyMiddleware);
 
