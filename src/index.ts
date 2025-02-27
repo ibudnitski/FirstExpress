@@ -45,7 +45,7 @@ const movies = [
     }
 ];
 
-app.get('/', (req, res) => {
+app.get('/', (Request: any, Response: any) => {
     res.json(movies);
 })
 
